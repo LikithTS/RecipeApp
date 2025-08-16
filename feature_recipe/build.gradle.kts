@@ -40,4 +40,21 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    //Dependency Injection
+    implementation(libs.koin.core)
+
+    //Unit test
+    implementation(libs.koin.test.junit)
+    testImplementation(libs.mockk)
+    testImplementation(libs.coroutines.test)
+
+    //Viewmodel
+    implementation(libs.viewmodel.compose)
+
+    //Retrofit
+    implementation(libs.squareup.retrofit2)
+    implementation(libs.squareup.retrofit2.gson)
+
+
 }
