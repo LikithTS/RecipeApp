@@ -34,10 +34,12 @@ rating: rounded to one decimal for display
 
 1. App will follow modular and clean architecture. Please note we can have a single module
    architecture here, but for future scalability purpose let's stick to modular approach.
-2. App is having 2 screen.
-3. Screen one contains list of recipes and we're using pagination here.
-4. Screen two contains details of any one recipe.
-5. Features :
+2. We can start Multi-module architecture only when project demands it or if we have plans to re-use the modules in other project. 
+3. Since list view can we common in most of app. I have created a multi-module. So we can re-use it in other project. 
+4. App is having 2 screen.
+5. Screen one contains list of recipes and we're using pagination here.
+6. Screen two contains details of any one recipe.
+7. Features :
    -> Screen one we can filter recipes based on difficulty and rating.
    -> In screen one added a new functionality to search recipes.
 

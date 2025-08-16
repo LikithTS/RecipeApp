@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Recipes"
 include(":app")
- 
+include(":feature_recipe")
+include(":feature_detail_recipe")
