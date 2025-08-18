@@ -56,17 +56,36 @@ fun RecipePortraitCardView(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(12.dp)
+                    .padding(top = 6.dp, start = 10.dp, end = 10.dp, bottom = 6.dp)
             ) {
 
-                Text(
-                    text = recipeData.name,
-                    style = MaterialTheme.typography.titleMedium,
-                    maxLines = 2,
-                    overflow = TextOverflow.Ellipsis
-                )
+                Row {
+                    Text(
+                        text = recipeData.name,
+                        style = MaterialTheme.typography.titleMedium,
+                        maxLines = 2,
+                        overflow = TextOverflow.Ellipsis
+                    )
 
-                Spacer(Modifier.height(8.dp))
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.End,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = stringResource(R.string.rating)
+                        )
+                        Spacer(Modifier.width(4.dp))
+                        Text(
+                            text = "${recipeData.rating} (${recipeData.reviewCount})",
+                            style = MaterialTheme.typography.labelLarge
+                        )
+                    }
+
+                }
+
+                Spacer(Modifier.height(6.dp))
 
                 Box(modifier = Modifier.fillMaxWidth()) {
                     Column(
@@ -88,23 +107,8 @@ fun RecipePortraitCardView(
                     }
                 }
 
-                Spacer(Modifier.height(8.dp))
+                Spacer(Modifier.height(6.dp))
 
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.End,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Icon(
-                        imageVector = Icons.Default.Star,
-                        contentDescription = stringResource(R.string.rating)
-                    )
-                    Spacer(Modifier.width(4.dp))
-                    Text(
-                        text = "${recipeData.rating} (${recipeData.reviewCount})",
-                        style = MaterialTheme.typography.labelLarge
-                    )
-                }
             }
         }
     }

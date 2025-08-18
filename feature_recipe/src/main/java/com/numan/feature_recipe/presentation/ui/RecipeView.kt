@@ -56,7 +56,6 @@ fun RecipeView(
                 state = lazyListState,
                 modifier = modifier
                     .fillMaxSize()
-                    .windowInsetsPadding(WindowInsets.displayCutout)
             ) {
                 items(recipeUiModelList) { recipeData ->
                     RecipePortraitCardView(recipeData)

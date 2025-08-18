@@ -66,23 +66,8 @@ fun RecipeLandscapeCardView(
                     cornerRadius = 16.dp
                 )
 
-                Spacer(Modifier.height(8.dp))
+                Spacer(Modifier.height(2.dp))
 
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.Start,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Icon(
-                        imageVector = Icons.Default.Star,
-                        contentDescription = stringResource(R.string.rating)
-                    )
-                    Spacer(Modifier.width(4.dp))
-                    Text(
-                        text = "${recipeData.rating} (${recipeData.reviewCount})",
-                        style = MaterialTheme.typography.labelLarge
-                    )
-                }
             }
 
             Column(
@@ -91,12 +76,30 @@ fun RecipeLandscapeCardView(
                     .fillMaxWidth()
             ) {
 
-                Text(
-                    text = recipeData.name,
-                    style = MaterialTheme.typography.titleMedium,
-                    maxLines = 2,
-                    overflow = TextOverflow.Ellipsis
-                )
+                Row {
+                    Text(
+                        text = recipeData.name,
+                        style = MaterialTheme.typography.titleMedium,
+                        maxLines = 2,
+                        overflow = TextOverflow.Ellipsis
+                    )
+
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.End,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = stringResource(R.string.rating)
+                        )
+                        Spacer(Modifier.width(4.dp))
+                        Text(
+                            text = "${recipeData.rating} (${recipeData.reviewCount})",
+                            style = MaterialTheme.typography.labelLarge
+                        )
+                    }
+                }
 
                 Spacer(Modifier.height(8.dp))
 
