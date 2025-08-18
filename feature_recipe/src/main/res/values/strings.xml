@@ -1,0 +1,9 @@
+<resources>
+    <string name="serving">Serving</string>
+    <string name="cuisine">Cuisine</string>
+    <string name="difficulty">Difficulty</string>
+    <string name="rating">Rating</string>
+    <string name="api_not_found">Api not found</string>
+    <string name="un_authorised">Un-Authorised! Please re-login again.</string>
+    <string name="failure">Get API failure</string>
+</resources>

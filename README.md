@@ -6,17 +6,17 @@ recipes list view.
 
 # Tech Stack
 
-Language/UI: Kotlin, Jetpack Compose, Material 3
-Architecture: Clean Architecture, MVVM (unidirectional data flow), Repository pattern
-Async: Kotlin Coroutines + Flows
-Networking: Retrofit + OkHttp (logging/interceptors)
-DI: Koin
-Paging: Paging 3
-Image Loading: Coil
-Testing: JUnit4, Compose UI Test
-Lint/Quality: ktlint/detekt (can be a future enhancement)  
-Min/Target SDK: 24 / 36
-IDE: Android Studio Narwhal | 2025.1.1
+1. Language/UI: Kotlin, Jetpack Compose, Material 3
+2. Architecture: Clean Architecture, MVVM (unidirectional data flow), Repository pattern
+3. Async: Kotlin Coroutines + Flows
+4. Networking: Retrofit + OkHttp (logging/interceptors)
+5. DI: Koin
+6. Paging: Paging 3
+7. Image Loading: Coil
+8. Testing: JUnit4, Compose UI Test
+9. Lint/Quality: ktlint/detekt (can be a future enhancement)
+10. Min/Target SDK: 24 / 36
+11. IDE: Android Studio Narwhal | 2025.1.1
 
 # API
 
@@ -34,13 +34,17 @@ rating: rounded to one decimal for display
 
 1. App will follow modular and clean architecture. Please note we can have a single module
    architecture here, but for future scalability purpose let's stick to modular approach.
-2. We can start Multi-module architecture only when project demands it or if we have plans to re-use the modules in other project. 
-3. Since list view can we common in most of app. I have created a multi-module. So we can re-use it in other project. 
+2. We can start Multi-module architecture only when project demands it or if we have plans to re-use
+   the modules in other project.
+3. Since list view can we common in most of app. I have created a multi-module. So we can re-use it
+   in other project.
 4. App is having 2 screen.
 5. Screen one contains list of recipes and we're using pagination here.
 6. Screen two contains details of any one recipe.
-7. Features :
-   -> Screen one we can filter recipes based on difficulty and rating.
+7. Note: Task says filter by difficulty and rating. As per review of json we have difficulty and
+   rating in all the item. So I feel sorting is more important here rather then filter.
+8. Features :
+   -> Screen one we can sort recipes based on difficulty and rating.
    -> In screen one added a new functionality to search recipes.
 
 # Known Limitations

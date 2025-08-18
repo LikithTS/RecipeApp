@@ -11,5 +11,7 @@ data class RecipeUiModel(
     val rating: Double,
     val reviewCount: Int,
     val userId: Int,
-    val difficulty: String
+    val difficulty: String,
+    val cuisine: String,
+    val serving: Int
 )

@@ -15,5 +15,5 @@ sealed interface APIResponse : Error {
     data object NOT_FOUND : APIResponse
     data object UNAUTHORISED : APIResponse
     data object REQUEST_TIMEOUT : APIResponse
-    data class EXCEPTION(val errorMessage: String) : APIResponse
+    data class GenericException(val errorMessage: String) : APIResponse
 }
