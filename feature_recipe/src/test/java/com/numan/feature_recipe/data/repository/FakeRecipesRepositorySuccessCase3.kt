@@ -1,25 +1,27 @@
 package com.numan.feature_recipe.data.repository
 
 import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
-import com.numan.feature_recipe.domain.model.RecipeUiModel
+import com.numan.feature_recipe.domain.model.RecipeUiResponseModel
 import com.numan.feature_recipe.domain.repository.RecipesRepository
-import com.numan.feature_recipe.domain.util.APIResponse
+import com.numan.feature_recipe.domain.util.NetworkErrorApiResponse
 import com.numan.feature_recipe.domain.util.JsonFileReader
 import com.numan.feature_recipe.domain.util.Result
 
+/**
+ * I need to update parameter names to support dynamic pagination.
+ * Previous commit had hardcoded scenario to test API working.
+ */
 class FakeRecipesRepositorySuccessCase3 : RecipesRepository {
 
     private val gson = Gson()
     private val jsonFileReader = JsonFileReader()
 
     override suspend fun getRecipes(
-        limit: Int,
-        skip: Int
-    ): Result<List<RecipeUiModel>, APIResponse> {
+        page: Int,
+        pageCount: Int
+    ): Result<RecipeUiResponseModel, NetworkErrorApiResponse> {
         val jsonData = jsonFileReader.readSampleJsonFromResource("RecipeSampleResponse3.json")
-        val listType = object : TypeToken<List<RecipeUiModel>>() {}.type
-        val recipesDataResponse: List<RecipeUiModel> = gson.fromJson(jsonData, listType)
+        val recipesDataResponse = gson.fromJson(jsonData, RecipeUiResponseModel::class.java)
         return Result.Success(recipesDataResponse)
     }
 }

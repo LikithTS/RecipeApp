@@ -7,13 +7,13 @@ package com.numan.feature_recipe.domain.util
  * API response will be one of the error type in the app.
  * We can create different error interface for different needs in our app.
  */
-sealed interface APIResponse : Error {
+sealed interface NetworkErrorApiResponse : Error {
 
-    data object BAD_REQUEST : APIResponse
-    data object EMPTY_RESPONSE : APIResponse
-    data object FAILURE : APIResponse
-    data object NOT_FOUND : APIResponse
-    data object UNAUTHORISED : APIResponse
-    data object REQUEST_TIMEOUT : APIResponse
-    data class GenericException(val errorMessage: String) : APIResponse
+    data object BAD_REQUEST : NetworkErrorApiResponse
+    data object EMPTY_RESPONSE : NetworkErrorApiResponse
+    data object FAILURE : NetworkErrorApiResponse
+    data object NOT_FOUND : NetworkErrorApiResponse
+    data object UNAUTHORISED : NetworkErrorApiResponse
+    data object REQUEST_TIMEOUT : NetworkErrorApiResponse
+    data class GenericException(val errorMessage: String) : NetworkErrorApiResponse
 }
