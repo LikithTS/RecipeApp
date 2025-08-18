@@ -5,7 +5,6 @@ import com.numan.feature_recipe.domain.util.FilterType
 import com.numan.feature_recipe.domain.util.RecipeDifficultyLevel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import kotlin.math.roundToInt
 
 /**
  * This use case will be only used to sort the list based on types.
@@ -27,9 +26,20 @@ class RecipeSortingUseCase {
                 }
 
                 FilterType.RATING -> {
+                    //Here we have only descending option. So we need to reverse the list once we sort
                     recipeList.sortedByDescending { recipe ->
-                        recipe.rating.roundToInt()
+                        recipe.rating
                     }
+                }
+
+                FilterType.NAME -> {
+                    recipeList.sortedBy { recipe ->
+                        recipe.name.lowercase()
+                    }
+                }
+
+                FilterType.RESET -> {
+                    recipeList
                 }
             }
         }
