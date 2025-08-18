@@ -1,18 +1,27 @@
 package com.numan.feature_recipe.data.util
 
-import com.numan.feature_recipe.data.model.Recipe
+import com.numan.feature_recipe.data.model.RecipesDto
 import com.numan.feature_recipe.domain.model.RecipeUiModel
+import com.numan.feature_recipe.domain.model.RecipeUiResponseModel
 
-fun Recipe.toRecipeUiModel(): RecipeUiModel {
-    return RecipeUiModel(
-        id = this.id,
-        name = this.name,
-        image = this.image,
-        rating = this.rating,
-        reviewCount = this.reviewCount,
-        userId = this.userId,
-        difficulty = this.difficulty,
-        cuisine = this.cuisine,
-        serving = this.servings
+/**
+ * I need to alter this extension function to have total.
+ */
+fun RecipesDto.toRecipeUiModel(): RecipeUiResponseModel {
+    return RecipeUiResponseModel(
+        recipeUiMode = recipes.map { recipe ->
+            RecipeUiModel(
+                id = recipe.id,
+                name = recipe.name,
+                image = recipe.image,
+                rating = recipe.rating,
+                reviewCount = recipe.reviewCount,
+                userId = recipe.userId,
+                difficulty = recipe.difficulty,
+                cuisine = recipe.cuisine,
+                serving = recipe.servings
+            )
+        },
+    totalItem = total
     )
 }

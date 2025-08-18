@@ -1,222 +1,225 @@
-[
-  {
-    "id": 1,
-    "name": "Classic Margherita Pizza",
-    "servings": 4,
-    "difficulty": "Easy",
-    "cuisine": "Italian",
-    "userId": 166,
-    "image": "https://cdn.dummyjson.com/recipe-images/1.webp",
-    "rating": 4.6,
-    "reviewCount": 98
-  },
-  {
-    "id": 2,
-    "name": "Vegetarian Stir-Fry",
-    "servings": 3,
-    "difficulty": "Medium",
-    "cuisine": "Asian",
-    "userId": 143,
-    "image": "https://cdn.dummyjson.com/recipe-images/2.webp",
-    "rating": 4.7,
-    "reviewCount": 26
-  },
-  {
-    "id": 3,
-    "name": "Chocolate Chip Cookies",
-    "servings": 24,
-    "difficulty": "Easy",
-    "cuisine": "American",
-    "userId": 34,
-    "image": "https://cdn.dummyjson.com/recipe-images/3.webp",
-    "rating": 4.9,
-    "reviewCount": 13
-  },
-  {
-    "id": 4,
-    "name": "Chicken Alfredo Pasta",
-    "servings": 4,
-    "difficulty": "Medium",
-    "cuisine": "Italian",
-    "userId": 136,
-    "image": "https://cdn.dummyjson.com/recipe-images/4.webp",
-    "rating": 4.9,
-    "reviewCount": 82
-  },
-  {
-    "id": 5,
-    "name": "Mango Salsa Chicken",
-    "servings": 3,
-    "difficulty": "Easy",
-    "cuisine": "Mexican",
-    "userId": 26,
-    "image": "https://cdn.dummyjson.com/recipe-images/5.webp",
-    "rating": 4.9,
-    "reviewCount": 63
-  },
-  {
-    "id": 6,
-    "name": "Quinoa Salad with Avocado",
-    "servings": 4,
-    "difficulty": "Easy",
-    "cuisine": "Mediterranean",
-    "userId": 197,
-    "image": "https://cdn.dummyjson.com/recipe-images/6.webp",
-    "rating": 4.4,
-    "reviewCount": 59
-  },
-  {
-    "id": 7,
-    "name": "Tomato Basil Bruschetta",
-    "servings": 6,
-    "difficulty": "Easy",
-    "cuisine": "Italian",
-    "userId": 137,
-    "image": "https://cdn.dummyjson.com/recipe-images/7.webp",
-    "rating": 4.7,
-    "reviewCount": 95
-  },
-  {
-    "id": 8,
-    "name": "Beef and Broccoli Stir-Fry",
-    "servings": 4,
-    "difficulty": "Medium",
-    "cuisine": "Asian",
-    "userId": 18,
-    "image": "https://cdn.dummyjson.com/recipe-images/8.webp",
-    "rating": 4.7,
-    "reviewCount": 58
-  },
-  {
-    "id": 9,
-    "name": "Caprese Salad",
-    "servings": 2,
-    "difficulty": "Easy",
-    "cuisine": "Italian",
-    "userId": 128,
-    "image": "https://cdn.dummyjson.com/recipe-images/9.webp",
-    "rating": 4.6,
-    "reviewCount": 82
-  },
-  {
-    "id": 10,
-    "name": "Shrimp Scampi Pasta",
-    "servings": 3,
-    "difficulty": "Medium",
-    "cuisine": "Italian",
-    "userId": 114,
-    "image": "https://cdn.dummyjson.com/recipe-images/10.webp",
-    "rating": 4.3,
-    "reviewCount": 5
-  },
-  {
-    "id": 11,
-    "name": "Classic Margherita Pizza",
-    "servings": 4,
-    "difficulty": "Easy",
-    "cuisine": "Italian",
-    "userId": 166,
-    "image": "https://cdn.dummyjson.com/recipe-images/1.webp",
-    "rating": 4.6,
-    "reviewCount": 98
-  },
-  {
-    "id": 12,
-    "name": "Vegetarian Stir-Fry",
-    "servings": 3,
-    "difficulty": "Medium",
-    "cuisine": "Asian",
-    "userId": 143,
-    "image": "https://cdn.dummyjson.com/recipe-images/2.webp",
-    "rating": 4.7,
-    "reviewCount": 26
-  },
-  {
-    "id": 13,
-    "name": "Chocolate Chip Cookies",
-    "servings": 24,
-    "difficulty": "Easy",
-    "cuisine": "American",
-    "userId": 34,
-    "image": "https://cdn.dummyjson.com/recipe-images/3.webp",
-    "rating": 4.9,
-    "reviewCount": 13
-  },
-  {
-    "id": 14,
-    "name": "Chicken Alfredo Pasta",
-    "servings": 4,
-    "difficulty": "Medium",
-    "cuisine": "Italian",
-    "userId": 136,
-    "image": "https://cdn.dummyjson.com/recipe-images/4.webp",
-    "rating": 4.9,
-    "reviewCount": 82
-  },
-  {
-    "id": 15,
-    "name": "Mango Salsa Chicken",
-    "servings": 3,
-    "difficulty": "Easy",
-    "cuisine": "Mexican",
-    "userId": 26,
-    "image": "https://cdn.dummyjson.com/recipe-images/5.webp",
-    "rating": 4.9,
-    "reviewCount": 63
-  },
-  {
-    "id": 16,
-    "name": "Quinoa Salad with Avocado",
-    "servings": 4,
-    "difficulty": "Easy",
-    "cuisine": "Mediterranean",
-    "userId": 197,
-    "image": "https://cdn.dummyjson.com/recipe-images/6.webp",
-    "rating": 4.4,
-    "reviewCount": 59
-  },
-  {
-    "id": 17,
-    "name": "Tomato Basil Bruschetta",
-    "servings": 6,
-    "difficulty": "Easy",
-    "cuisine": "Italian",
-    "userId": 137,
-    "image": "https://cdn.dummyjson.com/recipe-images/7.webp",
-    "rating": 4.7,
-    "reviewCount": 95
-  },
-  {
-    "id": 18,
-    "name": "Beef and Broccoli Stir-Fry",
-    "servings": 4,
-    "difficulty": "Medium",
-    "cuisine": "Asian",
-    "userId": 18,
-    "image": "https://cdn.dummyjson.com/recipe-images/8.webp",
-    "rating": 4.7,
-    "reviewCount": 58
-  },
-  {
-    "id": 19,
-    "name": "Caprese Salad",
-    "servings": 2,
-    "difficulty": "Easy",
-    "cuisine": "Italian",
-    "userId": 128,
-    "image": "https://cdn.dummyjson.com/recipe-images/9.webp",
-    "rating": 4.6,
-    "reviewCount": 82
-  },
-  {
-    "id": 20,
-    "name": "Shrimp Scampi Pasta",
-    "servings": 3,
-    "difficulty": "Medium",
-    "cuisine": "Italian",
-    "userId": 114,
-    "image": "https://cdn.dummyjson.com/recipe-images/10.webp",
-    "rating": 4.3,
-    "reviewCount": 5
-  }
-]
+{
+  "recipeUiMode": [
+    {
+      "id": 1,
+      "name": "Classic Margherita Pizza",
+      "servings": 4,
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "userId": 166,
+      "image": "https://cdn.dummyjson.com/recipe-images/1.webp",
+      "rating": 4.6,
+      "reviewCount": 98
+    },
+    {
+      "id": 2,
+      "name": "Vegetarian Stir-Fry",
+      "servings": 3,
+      "difficulty": "Medium",
+      "cuisine": "Asian",
+      "userId": 143,
+      "image": "https://cdn.dummyjson.com/recipe-images/2.webp",
+      "rating": 4.7,
+      "reviewCount": 26
+    },
+    {
+      "id": 3,
+      "name": "Chocolate Chip Cookies",
+      "servings": 24,
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "userId": 34,
+      "image": "https://cdn.dummyjson.com/recipe-images/3.webp",
+      "rating": 4.9,
+      "reviewCount": 13
+    },
+    {
+      "id": 4,
+      "name": "Chicken Alfredo Pasta",
+      "servings": 4,
+      "difficulty": "Medium",
+      "cuisine": "Italian",
+      "userId": 136,
+      "image": "https://cdn.dummyjson.com/recipe-images/4.webp",
+      "rating": 4.9,
+      "reviewCount": 82
+    },
+    {
+      "id": 5,
+      "name": "Mango Salsa Chicken",
+      "servings": 3,
+      "difficulty": "Easy",
+      "cuisine": "Mexican",
+      "userId": 26,
+      "image": "https://cdn.dummyjson.com/recipe-images/5.webp",
+      "rating": 4.9,
+      "reviewCount": 63
+    },
+    {
+      "id": 6,
+      "name": "Quinoa Salad with Avocado",
+      "servings": 4,
+      "difficulty": "Easy",
+      "cuisine": "Mediterranean",
+      "userId": 197,
+      "image": "https://cdn.dummyjson.com/recipe-images/6.webp",
+      "rating": 4.4,
+      "reviewCount": 59
+    },
+    {
+      "id": 7,
+      "name": "Tomato Basil Bruschetta",
+      "servings": 6,
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "userId": 137,
+      "image": "https://cdn.dummyjson.com/recipe-images/7.webp",
+      "rating": 4.7,
+      "reviewCount": 95
+    },
+    {
+      "id": 8,
+      "name": "Beef and Broccoli Stir-Fry",
+      "servings": 4,
+      "difficulty": "Medium",
+      "cuisine": "Asian",
+      "userId": 18,
+      "image": "https://cdn.dummyjson.com/recipe-images/8.webp",
+      "rating": 4.7,
+      "reviewCount": 58
+    },
+    {
+      "id": 9,
+      "name": "Caprese Salad",
+      "servings": 2,
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "userId": 128,
+      "image": "https://cdn.dummyjson.com/recipe-images/9.webp",
+      "rating": 4.6,
+      "reviewCount": 82
+    },
+    {
+      "id": 10,
+      "name": "Shrimp Scampi Pasta",
+      "servings": 3,
+      "difficulty": "Medium",
+      "cuisine": "Italian",
+      "userId": 114,
+      "image": "https://cdn.dummyjson.com/recipe-images/10.webp",
+      "rating": 4.3,
+      "reviewCount": 5
+    },
+    {
+      "id": 11,
+      "name": "Classic Margherita Pizza",
+      "servings": 4,
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "userId": 166,
+      "image": "https://cdn.dummyjson.com/recipe-images/1.webp",
+      "rating": 4.6,
+      "reviewCount": 98
+    },
+    {
+      "id": 12,
+      "name": "Vegetarian Stir-Fry",
+      "servings": 3,
+      "difficulty": "Medium",
+      "cuisine": "Asian",
+      "userId": 143,
+      "image": "https://cdn.dummyjson.com/recipe-images/2.webp",
+      "rating": 4.7,
+      "reviewCount": 26
+    },
+    {
+      "id": 13,
+      "name": "Chocolate Chip Cookies",
+      "servings": 24,
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "userId": 34,
+      "image": "https://cdn.dummyjson.com/recipe-images/3.webp",
+      "rating": 4.9,
+      "reviewCount": 13
+    },
+    {
+      "id": 14,
+      "name": "Chicken Alfredo Pasta",
+      "servings": 4,
+      "difficulty": "Medium",
+      "cuisine": "Italian",
+      "userId": 136,
+      "image": "https://cdn.dummyjson.com/recipe-images/4.webp",
+      "rating": 4.9,
+      "reviewCount": 82
+    },
+    {
+      "id": 15,
+      "name": "Mango Salsa Chicken",
+      "servings": 3,
+      "difficulty": "Easy",
+      "cuisine": "Mexican",
+      "userId": 26,
+      "image": "https://cdn.dummyjson.com/recipe-images/5.webp",
+      "rating": 4.9,
+      "reviewCount": 63
+    },
+    {
+      "id": 16,
+      "name": "Quinoa Salad with Avocado",
+      "servings": 4,
+      "difficulty": "Easy",
+      "cuisine": "Mediterranean",
+      "userId": 197,
+      "image": "https://cdn.dummyjson.com/recipe-images/6.webp",
+      "rating": 4.4,
+      "reviewCount": 59
+    },
+    {
+      "id": 17,
+      "name": "Tomato Basil Bruschetta",
+      "servings": 6,
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "userId": 137,
+      "image": "https://cdn.dummyjson.com/recipe-images/7.webp",
+      "rating": 4.7,
+      "reviewCount": 95
+    },
+    {
+      "id": 18,
+      "name": "Beef and Broccoli Stir-Fry",
+      "servings": 4,
+      "difficulty": "Medium",
+      "cuisine": "Asian",
+      "userId": 18,
+      "image": "https://cdn.dummyjson.com/recipe-images/8.webp",
+      "rating": 4.7,
+      "reviewCount": 58
+    },
+    {
+      "id": 19,
+      "name": "Caprese Salad",
+      "servings": 2,
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "userId": 128,
+      "image": "https://cdn.dummyjson.com/recipe-images/9.webp",
+      "rating": 4.6,
+      "reviewCount": 82
+    },
+    {
+      "id": 20,
+      "name": "Shrimp Scampi Pasta",
+      "servings": 3,
+      "difficulty": "Medium",
+      "cuisine": "Italian",
+      "userId": 114,
+      "image": "https://cdn.dummyjson.com/recipe-images/10.webp",
+      "rating": 4.3,
+      "reviewCount": 5
+    }
+  ],
+  "totalItem": 20
+}

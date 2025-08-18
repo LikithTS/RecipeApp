@@ -4,7 +4,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -21,9 +20,6 @@ fun RecipeHomeScreen(
     modifier: Modifier
 ) {
     val homeScreenViewModel: HomeScreenViewModel = koinViewModel()
-    LaunchedEffect(Unit) {
-        homeScreenViewModel.getRecipeData()
-    }
     RecipeHomeListView(
         modifier = modifier,
         homeScreenViewModel = homeScreenViewModel
@@ -56,10 +52,15 @@ fun RecipeHomeListView(
 
         is RecipeListUiState.Success -> {
             //Main UI content
-            RecipeView(recipeUiModelList = dataResp.recipeUiList, modifier = modifier)
+            RecipeView(
+                recipeUiModelList = dataResp.recipeUiList,
+                isAppending = dataResp.isAppending,
+                modifier = modifier,
+                homeScreenViewModel = homeScreenViewModel
+            )
         }
 
-        is RecipeListUiState.Error -> {
+        is RecipeListUiState.Failure -> {
             //Error handling view
             HandleErrorView(dataResp.message)
         }

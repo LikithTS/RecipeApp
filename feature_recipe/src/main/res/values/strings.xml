@@ -6,4 +6,5 @@
     <string name="api_not_found">Api not found</string>
     <string name="un_authorised">Un-Authorised! Please re-login again.</string>
     <string name="failure">Get API failure</string>
+    <string name="reached_end_of_recipe_list">No new item! Reached end of the list.</string>
 </resources>

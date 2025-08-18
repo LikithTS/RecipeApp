@@ -7,7 +7,8 @@ import com.numan.feature_recipe.data.repository.FakeRecipesRepositorySuccessCase
 import com.numan.feature_recipe.data.repository.FakeRecipesRepositorySuccessCase2
 import com.numan.feature_recipe.data.repository.FakeRecipesRepositorySuccessCase3
 import com.numan.feature_recipe.domain.repository.RecipesRepository
-import com.numan.feature_recipe.domain.util.APIResponse
+import com.numan.feature_recipe.domain.util.CustomRecipeErrorResponse
+import com.numan.feature_recipe.domain.util.NetworkErrorApiResponse
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert
 import org.junit.Test
@@ -17,6 +18,7 @@ import com.numan.feature_recipe.domain.util.Result
  * Following TDD approach.
  * Initially we will define all the test cases we think which is valid and needs to part of the class.
  * Logic will be add later.
+ * Updated parameter names and response handling
  */
 class GetRecipeUseCaseTest {
 
@@ -28,11 +30,11 @@ class GetRecipeUseCaseTest {
         recipesRepository = FakeRecipesRepositorySuccessCase()
         useCase = GetRecipeUseCase(recipesRepository)
 
-        when(val responseData = useCase(limit = 10, skip = 0)) {
+        when(val responseData = useCase(page = 1, pageCount = 10, totalItemCount = 0)) {
             is Result.Success -> {
-                Assert.assertEquals(10, responseData.data?.size)
-                Assert.assertEquals(1, responseData.data?.get(0)?.id)
-                Assert.assertEquals(10, responseData.data?.get(9)?.id)
+                Assert.assertEquals(10, responseData.data?.recipeUiMode?.size)
+                Assert.assertEquals(1, responseData.data?.recipeUiMode?.get(0)?.id)
+                Assert.assertEquals(10, responseData.data?.recipeUiMode?.get(9)?.id)
             }
             is Result.Error -> {
                 Assert.fail("Expected success but got error: ${responseData.error}")
@@ -45,11 +47,11 @@ class GetRecipeUseCaseTest {
         recipesRepository = FakeRecipesRepositorySuccessCase2()
         useCase = GetRecipeUseCase(recipesRepository)
 
-        when(val responseData = useCase(limit = 10, skip = 10)) {
+        when(val responseData = useCase(page = 2, pageCount = 10, totalItemCount = 50)) {
             is Result.Success -> {
-                Assert.assertEquals(10, responseData.data?.size)
-                Assert.assertEquals(11, responseData.data?.get(0)?.id)
-                Assert.assertEquals(20, responseData.data?.get(9)?.id)
+                Assert.assertEquals(10, responseData.data?.recipeUiMode?.size)
+                Assert.assertEquals(11, responseData.data?.recipeUiMode?.get(0)?.id)
+                Assert.assertEquals(20, responseData.data?.recipeUiMode?.get(9)?.id)
             }
             is Result.Error -> {
                 Assert.fail("Expected success but got error: ${responseData.error}")
@@ -62,11 +64,11 @@ class GetRecipeUseCaseTest {
         recipesRepository = FakeRecipesRepositorySuccessCase3()
         useCase = GetRecipeUseCase(recipesRepository)
 
-        when(val responseData = useCase(limit = 20, skip = 0)) {
+        when(val responseData = useCase(page = 1, pageCount = 20, totalItemCount = 0)) {
             is Result.Success -> {
-                Assert.assertEquals(20, responseData.data?.size)
-                Assert.assertEquals(1, responseData.data?.get(0)?.id)
-                Assert.assertEquals(20, responseData.data?.get(19)?.id)
+                Assert.assertEquals(20, responseData.data?.recipeUiMode?.size)
+                Assert.assertEquals(1, responseData.data?.recipeUiMode?.get(0)?.id)
+                Assert.assertEquals(20, responseData.data?.recipeUiMode?.get(19)?.id)
             }
             is Result.Error -> {
                 Assert.fail("Expected success but got error: ${responseData.error}")
@@ -79,12 +81,12 @@ class GetRecipeUseCaseTest {
         recipesRepository = FakeRecipesRepositoryFailureCase3()
         useCase = GetRecipeUseCase(recipesRepository)
 
-        when(val responseData = useCase(limit = 10, skip = 50)) {
+        when(val responseData = useCase(page = 5, pageCount = 10, totalItemCount = 50)) {
             is Result.Success -> {
                 Assert.fail("Expected failure but got success: ${responseData.data}")
             }
             is Result.Error -> {
-                Assert.assertEquals(APIResponse.EMPTY_RESPONSE, responseData.error)
+                Assert.assertEquals(CustomRecipeErrorResponse.NO_NEW_ITEM, responseData.error)
             }
         }
     }
@@ -94,12 +96,12 @@ class GetRecipeUseCaseTest {
         recipesRepository = FakeRecipesRepositoryForFailureCase()
         useCase = GetRecipeUseCase(recipesRepository)
 
-        when(val responseData = useCase(limit = 10, skip = 50)) {
+        when(val responseData = useCase(page = 10, pageCount = 50, totalItemCount = 0)) {
             is Result.Success -> {
                 Assert.fail("Expected failure but got success: ${responseData.data}")
             }
             is Result.Error -> {
-                Assert.assertEquals(APIResponse.FAILURE, responseData.error)
+                Assert.assertEquals(NetworkErrorApiResponse.FAILURE, responseData.error)
             }
         }
     }
@@ -109,12 +111,12 @@ class GetRecipeUseCaseTest {
         recipesRepository = FakeRecipesRepositoryFailureCase2()
         useCase = GetRecipeUseCase(recipesRepository)
 
-        when(val responseData = useCase(limit = 10, skip = 0)) {
+        when(val responseData = useCase(page = 1, pageCount = 10, totalItemCount = 0)) {
             is Result.Success -> {
                 Assert.fail("Expected failure but got success: ${responseData.data}")
             }
             is Result.Error -> {
-                Assert.assertEquals(APIResponse.NOT_FOUND, responseData.error)
+                Assert.assertEquals(NetworkErrorApiResponse.NOT_FOUND, responseData.error)
             }
         }
     }
