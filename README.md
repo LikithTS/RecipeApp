@@ -98,5 +98,5 @@ We can have a UI test in platform level, but I have given importance to unit tes
 
 # Author
 
-Likith Shankar
+Likith Thipsandra Shankar (LikthTs)
 likith.ts@gmail.com
