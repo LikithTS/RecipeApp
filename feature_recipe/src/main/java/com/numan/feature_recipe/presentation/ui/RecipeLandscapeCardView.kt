@@ -34,10 +34,12 @@ import com.numan.feature_recipe.domain.model.RecipeUiModel
  */
 @Composable
 fun RecipeLandscapeCardView(
-    recipeData: RecipeUiModel
+    recipeData: RecipeUiModel,
+    onCardClicked: (Int) -> Unit
 ) {
 
     ElevatedCard(
+        onClick = {onCardClicked(recipeData.id)},
         elevation = CardDefaults.cardElevation(defaultElevation = 6.dp),
         modifier = Modifier
             .fillMaxWidth()

@@ -10,4 +10,7 @@ sealed interface Route {
 
     @Serializable
     data object RecipeHomeScreen: Route
+
+    @Serializable
+    data class DetailRecipeScreen(val id: Int): Route
 }

@@ -29,13 +29,16 @@ import com.numan.feature_recipe.domain.model.RecipeUiModel
 
 /**
  * Portrait view for phones or smaller screen size.
+ * Handled on click event
  */
 @Composable
 fun RecipePortraitCardView(
-    recipeData: RecipeUiModel
+    recipeData: RecipeUiModel,
+    onCardClicked: (Int) -> Unit
 ) {
 
     ElevatedCard(
+        onClick = {onCardClicked(recipeData.id)},
         elevation = CardDefaults.cardElevation(defaultElevation = 6.dp),
         modifier = Modifier
             .fillMaxWidth()

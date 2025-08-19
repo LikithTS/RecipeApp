@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
 }
 
 android {
@@ -30,6 +31,7 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+    buildFeatures { compose = true }
 }
 
 dependencies {
@@ -40,4 +42,31 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.androidx.material3)
+    implementation(platform(libs.androidx.compose.bom))
+
+    //Dependency Injection
+    implementation(libs.koin.core)
+
+    //Unit test
+    implementation(libs.koin.test.junit)
+    testImplementation(libs.mockk)
+    testImplementation(libs.coroutines.test)
+
+    //Viewmodel
+    implementation(libs.viewmodel.compose)
+
+    //Retrofit
+    implementation(libs.squareup.retrofit2)
+    implementation(libs.squareup.retrofit2.gson)
+    implementation(libs.logging.interceptor)
+
+    //Coil
+    implementation(libs.coil)
+    implementation(libs.coil.network.okhttp)
+    implementation(libs.coil.network.ktor2)
+    implementation(libs.coil.network.ktor3)
+
+    //adaptive screen
+    implementation(libs.material3.adaptive)
 }

@@ -23,13 +23,9 @@ class HomeScreenViewModel(
 
     private val _uiState = MutableStateFlow<RecipeListUiState>(RecipeListUiState.Ideal)
     val uiState = _uiState.asStateFlow()
-
     private val _selectedFilter = MutableStateFlow<FilterType?>(null)
     val selectedFilter = _selectedFilter.asStateFlow()
-
-
     private val pageCount = 10
-
     private val completeRecipeList = mutableListOf<RecipeUiModel>()
 
     private val paginator = CustomPaginationLib(

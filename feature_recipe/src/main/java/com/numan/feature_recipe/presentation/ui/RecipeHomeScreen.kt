@@ -9,15 +9,16 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.numan.feature_recipe.R
 import com.numan.feature_recipe.presentation.HomeScreenViewModel
 import com.numan.feature_recipe.presentation.model.RecipeListUiState
@@ -25,26 +26,30 @@ import org.koin.androidx.compose.koinViewModel
 
 /**
  * Home screen which shows list of recipe data.
+ * Fixed few minor UI issues
  */
 @Composable
 fun RecipeHomeScreen(
-    modifier: Modifier
+    modifier: Modifier,
+    onCardItemClicked: (Int) -> Unit
 ) {
     val homeScreenViewModel: HomeScreenViewModel = koinViewModel()
     RecipeHomeListView(
         modifier = modifier,
-        homeScreenViewModel = homeScreenViewModel
+        homeScreenViewModel = homeScreenViewModel,
+        onCardItemClicked = onCardItemClicked
     )
 }
 
 @Composable
 fun RecipeHomeListView(
     modifier: Modifier,
-    homeScreenViewModel: HomeScreenViewModel
+    homeScreenViewModel: HomeScreenViewModel,
+    onCardItemClicked: (Int) -> Unit
 ) {
 
-    val recipeState by homeScreenViewModel.uiState.collectAsState()
-    val selectedFilter by homeScreenViewModel.selectedFilter.collectAsState()
+    val recipeState by homeScreenViewModel.uiState.collectAsStateWithLifecycle()
+    val selectedFilter by homeScreenViewModel.selectedFilter.collectAsStateWithLifecycle()
 
 
     when (val dataResp = recipeState) {
@@ -74,17 +79,19 @@ fun RecipeHomeListView(
                         text = stringResource(R.string.recipes),
                         textAlign = TextAlign.Center,
                         color = colorResource(R.color.white),
-                        fontSize = 20.sp,
+                        fontSize = 18.sp,
+                        fontWeight = FontWeight.W500,
                         modifier = Modifier.padding(top = 10.dp)
                             .fillMaxWidth()
-                            .background(color = colorResource(R.color.blue_jay))
+                            .background(color = colorResource(R.color.primary_blue))
                             .padding(all = 10.dp)
                     )
                     RecipeView(
                         recipeUiModelList = dataResp.recipeUiList,
                         isAppending = dataResp.isAppending,
                         modifier = Modifier,
-                        homeScreenViewModel = homeScreenViewModel
+                        homeScreenViewModel = homeScreenViewModel,
+                        onCardClicked = onCardItemClicked
                     )
 
                 }
