@@ -61,5 +61,6 @@ dependencies {
     implementation(libs.navigation.compose)
     implementation(libs.koin.core)
     implementation(project(":feature_recipe"))
+    implementation(project(":feature_detail_recipe"))
 
 }

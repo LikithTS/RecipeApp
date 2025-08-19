@@ -31,7 +31,8 @@ fun RecipeView(
     recipeUiModelList: List<RecipeUiModel>,
     modifier: Modifier,
     homeScreenViewModel: HomeScreenViewModel,
-    isAppending: Boolean
+    isAppending: Boolean,
+    onCardClicked: (Int) -> Unit
 ) {
 
     val windowSizeClass = currentWindowAdaptiveInfo().windowSizeClass
@@ -58,7 +59,7 @@ fun RecipeView(
                     .fillMaxSize()
             ) {
                 items(recipeUiModelList) { recipeData ->
-                    RecipePortraitCardView(recipeData)
+                    RecipePortraitCardView(recipeData, onCardClicked)
                 }
 
                 if (isAppending) {
@@ -84,7 +85,7 @@ fun RecipeView(
                     .windowInsetsPadding(WindowInsets.displayCutout)
             ) {
                 items(recipeUiModelList) { recipeData ->
-                    RecipeLandscapeCardView(recipeData)
+                    RecipeLandscapeCardView(recipeData, onCardClicked)
                 }
 
                 if (isAppending) {
